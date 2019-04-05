@@ -1,0 +1,151 @@
+$bodyfundo: #171717;
+$borderStyle: 2px solid rgb(50, 75, 219);
+$borderStyle2: 5px;
+$cumprimento: 300px;
+$altura: 30px;
+$corFundo: black;
+$letters: white;
+$fontSize: 30px;
+$padding: 20px;
+$shadow: 0 4px 8px rgba(0, 0, 0, 0.521);
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/fonts/icomoon.eot?zew5x9');
+    src:  url('../fonts/icomoon/fonts/icomoon.eot?zew5x9#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon/fonts/icomoon.ttf?zew5x9') format('truetype'),
+      url('../fonts/icomoon/fonts/icomoon.woff?zew5x9') format('woff'),
+      url('../fonts/icomoon/fonts/icomoon.svg?zew5x9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cross:before {
+    content: "\ea0f";
+  }
+  .icon-checkmark:before {
+    content: "\ea10";
+  }
+  
+    
+
+
+
+
+
+body {
+    background: $bodyfundo;
+    font-family: 'Oswald', sans-serif;
+}
+
+main{
+    width: 100%;
+
+    div{
+        margin: auto;
+        text-align: center;
+        padding: $padding;
+    }
+
+    input{
+        border: $borderStyle;
+        width: $cumprimento;
+        height: $altura;
+        border-radius: $borderStyle2;
+        background: $bodyfundo;
+        color: $letters;
+        padding: $padding;
+        font-size: $fontSize;
+        box-shadow: $shadow;
+    }
+
+    #result{
+        border: $borderStyle;
+        width: $cumprimento;
+        height: $altura;
+        border-radius: $borderStyle2;
+        margin: auto;
+        color: $letters;
+        font-size: $fontSize;
+        padding-bottom: 37px;
+        box-shadow: $shadow;
+    }
+
+    .in{
+        background: $bodyfundo;
+        z-index: -1;
+        position: relative;
+        margin-top: -85px;
+        width: 37px;
+        left: 128px;
+    }
+
+    #pin {
+
+        width: 340px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        .btn{
+            background: $bodyfundo;
+            width: 30px;
+            height: 30px;
+            padding: 20px;
+            box-shadow: $shadow;
+            margin: 19px;
+            border-radius: 50px;
+            border: $borderStyle;
+            color: white;
+            font-size: $fontSize;
+            position: relative;
+
+            &:active {
+
+                background: rgb(50,75,219) !important;
+                box-shadow: none!important;
+
+                
+            }
+            span{
+                left: 50%;
+                top: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
+.icon {
+    color: white;
+    &:before {
+        font-family: 'icomoon';
+        content: "\ea10";
+        font-size: 40px;
+    }
+}
+
+.icon-cross {
+    color: white;
+    &:before {
+        font-family: 'icomoon';
+        content: "\ea0f";
+        font-size: 40px;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
